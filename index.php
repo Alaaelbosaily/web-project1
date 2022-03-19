@@ -65,9 +65,17 @@
                     $prepare->execute(array($values['email']));
                     $count=$prepare->rowCount();
                     
+                    $prepareUserName=$con->prepare("SELECT * FROM users WHERE userName=? ");
+                    $prepareUserName->execute(array($values['userName']));
+                    $countUserName=$prepareUserName->rowCount();
+                    if($countUserName>0){
+                        $errors['userName']='This user name is exist';
+                    }
                     if($count>0){
                         $errors['email']='This email is exist';
-                    }else{
+                    }
+
+                    if(!($count>0||$countUserName)){
                         try{
                             echo 'inside second try';
                             $prepare=$con->prepare('INSERT INTO users(userName,firstName,lastName,email,password) VALUES(?,?,?,?,sha1(?))');
