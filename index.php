@@ -77,12 +77,8 @@
 
                     if(!($count>0||$countUserName)){
                         try{
-                            echo 'inside second try';
                             $prepare=$con->prepare('INSERT INTO users(userName,firstName,lastName,email,password) VALUES(?,?,?,?,sha1(?))');
-                            echo 'after prepare';    
-                            $prepare->execute(array($values['userName'],$values['firstName'],$values['lastName'],$values['email'],$values['password']));
-                            print_r($values);
-                            echo 'done';
+                            $prepare->execute(array($values['userName'],$values['firstName'],$values['lastName'],$values['email'],$values['password'])); 
                         }catch(PDOException $e){
             
                         }
