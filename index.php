@@ -110,17 +110,17 @@
         <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
             <h3>register now</h3>
             <input type="text" name="userName" placeholder="enter your name" class="box">
-            <span><?php echo $errors['userName']?></span>
+            <span class="error-span"><?php echo $errors['userName']?></span>
             <input type="text" name="firstName" placeholder="enter your firstName" class="box">
-            <span><?php echo $errors['firstName']?></span>
+            <span class="error-span"><?php echo $errors['firstName']?></span>
             <input type="text" name="lastName" placeholder="enter your lastName" class="box">
-            <span><?php echo $errors['lastName']?></span>
+            <span class="error-span"><?php echo $errors['lastName']?></span>
             <input type="email" name="email" placeholder="enter your email" class="box">
-            <span><?php echo $errors['email']?></span>
+            <span class="error-span"><?php echo $errors['email']?></span>
             <input type="password" name="password" placeholder="enter your password" class="box">
-            <span><?php echo $errors['password']?></span>
+            <span class="error-span"><?php echo $errors['password']?></span>
             <input type="password" name="confirmPassword" placeholder="confirm your password" class="box">
-            <span><?php echo $errors['confirmPassword']?></span>
+            <span class="error-span"><?php echo $errors['confirmPassword']?></span>
             <select class="box" name="user_type" id="">
                 <option value="user">user</option>
                 <option value="admin">admin</option>
