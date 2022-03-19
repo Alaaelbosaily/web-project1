@@ -19,6 +19,16 @@
     color: var(--red);
 }
 
+.display-order .grand-total{
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    color:var(--light-color);
+ }
+
+.display-order .grand-total span{
+    color:var(--red);
+ }
+
 .checkout form{
     max-width: 1200px;
     padding: 2rem;
@@ -42,6 +52,10 @@
     gap: 1.5rem;
 }
 
+.checkout form .flex .inputBox{
+    flex:1 1 40rem;
+ }
+
 .checkout form .flex span{
     font-size: 2rem;
     color: var(--black);
@@ -57,3 +71,4 @@
     font-size: 1.8rem;
     margin: 1rem 0;
 }
+

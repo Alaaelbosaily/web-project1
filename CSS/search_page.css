@@ -1,0 +1,14 @@
+.search-form{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: .5rem;
+}
+
+.search-form .box{
+   width: 100%;
+   border: var(--border);
+   padding: 1.2rem 1.4rem;
+   font-size: 2rem; 
+   color: var(--black);
+}
