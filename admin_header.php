@@ -35,14 +35,14 @@
       
     <header class=" header1 ">
       
-          <p class=" logo ">admin <span>panel</span></p>
+          <p class=" logo ">Admin <span>panel</span></p>
 
           <nav class=" navbar ">
-            <a class=" aa " href=" # ">home</a>
-            <a class=" bb " href=" # ">products</a>
-            <a class=" cc " href=" # ">orders</a>
-            <a class=" dd " href=" # ">users</a>
-            <a class=" ff " href=" # ">contact us</a>
+            <a class=" aa " href=" # ">Home</a>
+            <a class=" bb " href=" # ">Products</a>
+            <a class=" cc " href=" # ">Orders</a>
+            <a class=" dd " href=" # ">Users</a>
+            <a class=" ff " href=" # ">Contact us</a>
           </nav>
 
           <div class=" icons ">
@@ -64,31 +64,31 @@
       <div class=" container ">
         <div class=" box ">
           <span><?php echo $totalAdmins?></span>
-          <span class=" text-container ">Total Users</span>
+          <span class=" text-container ">Total Admins</span>
         </div>
         <div class=" box ">
           <span><?php echo $totalNormals?></span>
+          <span class=" text-container ">Total Normals</span>
+        </div>
+        <div class=" box ">
+          <span><?php echo $totalUsers?></span>
           <span class=" text-container ">Total Users</span>
         </div>
         <div class=" box ">
           <span>0</span>
-          <span class=" text-container ">Total Users</span>
+          <span class=" text-container ">Pending Orders</span>
         </div>
         <div class=" box ">
           <span>0</span>
-          <span class=" text-container ">Total Users</span>
+          <span class=" text-container ">Accepted Orders</span>
         </div>
         <div class=" box ">
           <span>0</span>
-          <span class=" text-container ">Total Users</span>
+          <span class=" text-container ">Canceled Orders</span>
         </div>
         <div class=" box ">
           <span>0</span>
-          <span class=" text-container ">Total Users</span>
-        </div>
-        <div class=" box ">
-          <span>0</span>
-          <span class=" text-container ">Total Users</span>
+          <span class=" text-container ">Total Orders</span>
         </div>
         <div class=" box ">
           <span>0</span>
