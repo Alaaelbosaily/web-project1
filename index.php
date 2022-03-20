@@ -23,37 +23,37 @@
         if(empty($_POST['userName'])){
             $errors['userName']='Required*';
         }else{
-            $values['userName']=$_POST['userName'];
+            $values['userName']=htmlspecialchars( $_POST['userName']);
         }
 
         if(empty($_POST['firstName'])){
             $errors['firstName']='Required*';
         }else{
-            $values['firstName']=$_POST['firstName'];
+            $values['firstName']=htmlspecialchars($_POST['firstName']);
         }
 
         if(empty($_POST['lastName'])){
             $errors['lastName']='Required*';
         }else{
-            $values['lastName']=$_POST['lastName'];
+            $values['lastName']=htmlspecialchars($_POST['lastName']);
         }
 
         if(empty($_POST['email'])){
             $errors['email']='Required*';
         }else{
-            $values['email']=$_POST['email'];
+            $values['email']=htmlspecialchars($_POST['email']);
         }
 
         if(empty($_POST['password'])){
             $errors['password']='Required*';
         }else{
-            $values['password']=$_POST['password'];
+            $values['password']=htmlspecialchars($_POST['password']);
         }
 
         if(empty($_POST['confirmPassword'])){
             $errors['confirmPassword']='Required*';
         }else{
-            $values['confirmPassword']=$_POST['confirmPassword'];
+            $values['confirmPassword']=htmlspecialchars($_POST['confirmPassword']);
         }
 
         if(!(empty($values['userName'])||empty($values['firstName'])||empty($values['lastName'])
