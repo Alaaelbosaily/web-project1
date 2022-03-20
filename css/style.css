@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+
 *{
-    font-family: 'rubik',sans-serif;
+     font-family: 'Roboto', sans-serif;;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -429,4 +431,76 @@ div .logout-btn{
     margin-right: 50px;
     margin-bottom: 30px;
     border-radius: 8px;
+}
+.title5{
+    margin-left: 560px;
+    padding-top: 30px;
+    font-size: 50px;
+}
+.add-product{
+    border: 1px solid black;
+    text-align: center;
+    width: 670px;
+    margin-left: 26%;
+   margin-top: 25px;
+}
+
+
+.boxz{
+    width: 90%;
+    background-color: rgba(128, 128, 128, 0.116);
+    border-radius: .5rem;
+    padding:.6rem .8rem;
+    font-size: 1.2rem;
+    color: black;
+    margin: 1rem 0;
+    border:solid 1px black;
+    
+}
+.boxm {
+    width: 90%;
+    background-color: rgba(128, 128, 128, 0.116);
+    border-radius: .5rem;
+    padding:.6rem .8rem;
+    font-size: 1.2rem;
+    color: black;
+    margin: 1rem 0;
+    border:solid 1px black;
+}
+.btn1{
+    color: white;
+    background-color:rgb(204, 33, 204);
+    width: 200px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+}
+.btn1:hover{
+    background-color: black;
+
+}
+.selectphoto{
+    width: 90%;
+    background-color: rgba(128, 128, 128, 0.116);
+    border-radius: .5rem;
+    padding:.6rem .8rem;
+    font-size: 1.2rem;
+    color: black;
+    margin: 1rem 0;
+    border:solid 1px black;
+    margin-left: 32px;
+}
+.add-product{
+    box-shadow:  0 .8rem 1.2rem gainsboro;
+}
+.add-product div h3 {
+    margin-top: 15px;
+    font-size: 30px;
+}
+.books-admin{
+    
+  border: 1px solid gray;
+}
+.happylemon{
+    height: 400px;
 }
