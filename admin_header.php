@@ -1,21 +1,28 @@
 <?php
+  session_start();
   require('connect.php');
-  try{
-    $prepareTotal=$con->prepare("SELECT * FROM users");
-    $prepareTotal->execute();
-    $totalUsers=$prepareTotal->rowCount();
-
-    $prepareNoramls=$con->prepare("SELECT * FROM users WHERE userGroup=1");
-    $prepareNoramls->execute();
-    $totalNormals=$prepareNoramls->rowCount();
-
-    $prepareAdmins=$con->prepare("SELECT * FROM users WHERE userGroup=2");
-    $prepareAdmins->execute();
-    $totalAdmins=$prepareAdmins->rowCount();
-
-  }catch(PDOException $e){
-
+ 
+  if(isset($_SESSION['userName'])){
+    try{
+      $prepareTotal=$con->prepare("SELECT * FROM users");
+      $prepareTotal->execute();
+      $totalUsers=$prepareTotal->rowCount();
+  
+      $prepareNoramls=$con->prepare("SELECT * FROM users WHERE userGroup=1");
+      $prepareNoramls->execute();
+      $totalNormals=$prepareNoramls->rowCount();
+  
+      $prepareAdmins=$con->prepare("SELECT * FROM users WHERE userGroup=2");
+      $prepareAdmins->execute();
+      $totalAdmins=$prepareAdmins->rowCount();
+  
+    }catch(PDOException $e){
+  
+    }
+  }else{
+    exit();
   }
+  
 
 ?>
 <!DOCTYPE html>
@@ -27,7 +34,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>admin</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin_style.css">
     <link rel="stylesheet" href="<link rel=" preconnect " href=" https://fonts.googleapis.com ">
   <link rel=" preconnect " href=" https://fonts.gstatic.com " crossorigin>
   </head>

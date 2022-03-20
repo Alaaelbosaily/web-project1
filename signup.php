@@ -1,5 +1,6 @@
 <?php
     require('connect.php');
+    
     $errors=array(
         'userName'=>'',
         'firstName'=>'',
@@ -79,7 +80,9 @@
                         try{
                             $prepare=$con->prepare('INSERT INTO users(userName,firstName,lastName,email,password) VALUES(?,?,?,?,sha1(?))');
                             $prepare->execute(array($values['userName'],$values['firstName'],$values['lastName'],$values['email'],$values['password']));
+                            
                             header("Location:login.php"); 
+                            exit();
                         }catch(PDOException $e){
             
                         }
