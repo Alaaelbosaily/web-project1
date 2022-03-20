@@ -17,7 +17,8 @@
             <input type="email" name="name" placeholder="enter your email" required class="box">
             <input type="password" name="name" placeholder="enter your password" required class="box">
             <input type="submit" name="submit" value="register now" class="btn">
-            <p>don't have an account? <a href="login.php">register now</a> </p>
+            <p>don't have an account? <a href="index.php">register now</a> </p>
+            <a href="https://google.com" target="_blank">google</a>
         </form>
     </div>
 </body>

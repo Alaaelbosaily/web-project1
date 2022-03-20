@@ -75,10 +75,11 @@
                         $errors['email']='This email is exist';
                     }
 
-                    if(!($count>0||$countUserName)){
+                    if(!($count>0||$countUserName>0)){
                         try{
                             $prepare=$con->prepare('INSERT INTO users(userName,firstName,lastName,email,password) VALUES(?,?,?,?,sha1(?))');
-                            $prepare->execute(array($values['userName'],$values['firstName'],$values['lastName'],$values['email'],$values['password'])); 
+                            $prepare->execute(array($values['userName'],$values['firstName'],$values['lastName'],$values['email'],$values['password']));
+                            header("Location:login.php"); 
                         }catch(PDOException $e){
             
                         }
@@ -113,35 +114,31 @@
     <div class="form-container">
         <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post" autocomplete="off">
             <h3>register now</h3>
-            <input type="text" name="userName" placeholder="enter your name" class="box" autocomplete="off">
+            <input type="text" name="userName" placeholder="User Name" class="box" autocomplete="off">
             <span class="error-span">
                 <?php echo $errors['userName']?>
             </span>
-            <input type="text" name="firstName" placeholder="enter your firstName" class="box" autocomplete="off">
+            <input type="text" name="firstName" placeholder="FirstName" class="box" autocomplete="off">
             <span class="error-span">
                 <?php echo $errors['firstName']?>
             </span>
-            <input type="text" name="lastName" placeholder="enter your lastName" class="box" autocomplete="off">
+            <input type="text" name="lastName" placeholder="LastName" class="box" autocomplete="off">
             <span class="error-span">
                 <?php echo $errors['lastName']?>
             </span>
-            <input type="email" name="email" placeholder="enter your email" class="box" autocomplete="off">
+            <input type="email" name="email" placeholder="Email" class="box" autocomplete="off">
             <span class="error-span">
                 <?php echo $errors['email']?>
             </span>
-            <input type="password" name="password" placeholder="enter your password" class="box" autocomplete="off">
+            <input type="password" name="password" placeholder="Password" class="box" autocomplete="off">
             <span class="error-span">
                 <?php echo $errors['password']?>
             </span>
-            <input type="password" name="confirmPassword" placeholder="confirm your password" class="box"
-                autocomplete="off">
+            <input type="password" name="confirmPassword" placeholder="Confirm Password" class="box" autocomplete="off">
             <span class="error-span">
                 <?php echo $errors['confirmPassword']?>
             </span>
-            <select class="box" name="user_type" id="">
-                <option value="user">user</option>
-                <option value="admin">admin</option>
-            </select>
+
             <input type="submit" name="submit" value="register now" class="btn">
             <p>already have an account? <a href="login.html">login now</a> </p>
         </form>
