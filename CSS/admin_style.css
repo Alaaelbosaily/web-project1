@@ -250,8 +250,8 @@ section .container .box {
     flex-direction: column;
     align-items: center;
     margin: 20px;
-    width: 400px;
-    height: 200px;
+    width: 600px;
+    height: 300px;
     padding: 10px;
     border-radius: 8px;
     transition: 0.4s;
@@ -279,7 +279,7 @@ section .container .box:hover {
 section .container .box span {
     color: white;
     margin-top: 30px;
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: 800;
 }
 
@@ -288,7 +288,7 @@ section .container .box span.text-container {
     color: white;
     border-radius: 7px;
     margin-top: 30px;
-    font-size: 1.8em;
+    font-size: 2em;
     font-weight: 600;
     background-color: var(--main-color);
     -webkit-border-radius: 7px;
@@ -296,6 +296,3 @@ section .container .box span.text-container {
     -ms-border-radius: 7px;
     -o-border-radius: 7px;
 }
-
-
-/* adding products style */

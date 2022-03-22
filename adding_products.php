@@ -103,7 +103,18 @@
         }
 
     }
-
+    if(isset($_POST['deleteProduct'])){
+        
+            try{
+                
+                $deletePrepare=$con->prepare('delete from books where bookId=?');
+                $deletePrepare->execute(array($_POST['hiddenId']));
+            
+                }catch(PDOEception $e){
+            
+                }
+        
+    }
 
 ?>
 
@@ -125,27 +136,45 @@
     <?php include('inline_header.php') ?>
         <section>
             <h2>Add Products</h2>
-            <div class=" container">
-    <form action="<?php $_SERVER['PHP_SELF']?>" method="post">
-        <span class="error"><?php echo $errors['generalError']?></span>
-        <input type="text" name="productName" placeholder="Product Name">
-        <span class="error"><?php echo $errors['productName']?></span>
-        <input type="text" name="productAuthor" placeholder="Product Author">
-        <span class="error"><?php echo $errors['productAuthor']?></span>
-        <input type="text" name="productpublisherName" placeholder="Product publisher Name">
-        <span class="error"><?php echo $errors['productpublisherName']?></span>
-        <input type="text" name="productDescription" placeholder="Product Description">
-        <span class="error"><?php echo $errors['productDescription']?></span>
-        <input type="text" name="productCategory" placeholder="Product Category">
-        <span class="error"><?php echo $errors['productCategory']?></span>
-        <input type="text" name="productCode" placeholder="Product Code">
-        <span class="error"><?php echo $errors['productCode']?></span>
-        <input type="text" name="productPrice" placeholder="Product Price">
-        <span class="error"><?php echo $errors['productPrice']?></span>
-        <input type="text" name="productQuantity" placeholder="Product Quantity">
-        <span class="error"><?php echo $errors['productQuantity']?></span>
-        <input type="file" name="file">
-        <input type="submit" name="addProduct" value="Add Product" class="btn">
+            <div class=" container ">
+    <form action=" <?php $_SERVER[ 'PHP_SELF' ]?>" method="post">
+    <span class="error">
+        <?php echo $errors['generalError']?>
+    </span>
+    <input type="text" name="productName" placeholder="Product Name">
+    <span class="error">
+        <?php echo $errors['productName']?>
+    </span>
+    <input type="text" name="productAuthor" placeholder="Product Author">
+    <span class="error">
+        <?php echo $errors['productAuthor']?>
+    </span>
+    <input type="text" name="productpublisherName" placeholder="Product publisher Name">
+    <span class="error">
+        <?php echo $errors['productpublisherName']?>
+    </span>
+    <input type="text" name="productDescription" placeholder="Product Description">
+    <span class="error">
+        <?php echo $errors['productDescription']?>
+    </span>
+    <input type="text" name="productCategory" placeholder="Product Category">
+    <span class="error">
+        <?php echo $errors['productCategory']?>
+    </span>
+    <input type="text" name="productCode" placeholder="Product Code">
+    <span class="error">
+        <?php echo $errors['productCode']?>
+    </span>
+    <input type="text" name="productPrice" placeholder="Product Price">
+    <span class="error">
+        <?php echo $errors['productPrice']?>
+    </span>
+    <input type="text" name="productQuantity" placeholder="Product Quantity">
+    <span class="error">
+        <?php echo $errors['productQuantity']?>
+    </span>
+
+    <input type="submit" name="addProduct" value="Add Product" class="btn">
     </form>
     </div>
     </section>
@@ -163,23 +192,18 @@
                         <img src="images/01.png" alt="productImage"data-id="'.$book['bookId'].'">
                         <span class="productName" data-id="'.$book['bookId'].'">'.$book['name'].'</span>
                         <span class="productPrice"data-id="'.$book['bookId'].'">'.$book['price'].'<span>/$</span></span>
-        
-                    </div>');
-                    }
-                }
-            }catch(PDOException $e){
+                        <form action="'.$_SERVER['PHP_SELF'].'" method="post">
+            <input type="hidden" name="hiddenId" value="'.$book['bookId'].'">
+            <input type="submit" name="deleteProduct" value="Delete" class="delete-btn">
+            </form>
 
-            }
-            ?>
-            <!-- <div class="box">
-                <img src="images/01.png" alt="productImage">
-                <span class="productName">Intro to algorithms</span>
-                <span class="productPrice">20<span>/$</span></span>
+            <span class="update-btn btn">Update</span>
+        </div>'); } } }catch(PDOException $e){ } ?>
 
-            </div> -->
 
         </div>
     </section>
+
     </body>
 
 </html>
