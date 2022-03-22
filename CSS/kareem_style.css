@@ -33,40 +33,6 @@
     background-color: var(--header-color);
 }
 
-.form-container {
-    min-height: 100vh;
-    background-color: var(--main-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.form-container form {
-    padding: 2rem;
-    width: 50rem;
-    border-radius: 0.5rem;
-    border: solid 1px black;
-    background-color: white;
-    text-align: center;
-}
-
-.form-container form h3 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-}
-
-.form-container form .box {
-    width: 100%;
-    background-color: rgba(128, 128, 128, 0.116);
-    border-radius: 0.5rem;
-    padding: 1.2rem 1.4rem;
-    font-size: 1.2rem;
-    color: black;
-    margin: 1rem 0;
-    border: solid 1px black;
-}
-
 .btn,
 .option-btn,
 .delete-btn,
@@ -78,40 +44,11 @@
     text-transform: capitalize;
 }
 
-.btn {
-    background-color: purple;
-    border-radius: 0.5rem;
-}
-
 .btn:hover,
 .option-btn:hover,
 .delete-btn:hover {
     background-color: black;
     font-size: 1.24rem;
-}
-
-.form-container form {
-    padding-top: 1rem;
-    font-size: 1.5rem;
-    color: black;
-}
-
-.form-container form p a {
-    color: var(--main-color);
-    text-decoration: none;
-}
-
-.form-container form p a:hover {
-    text-decoration: underline;
-}
-
-p {
-    padding-top: 10px;
-}
-
-.image {
-    height: 15px;
-    width: 20px;
 }
 
 header {
@@ -139,6 +76,11 @@ header .logo {
 
 header .logo span {
     color: var(--main-color);
+}
+
+section .container form {
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar {
@@ -216,11 +158,6 @@ div .logout-btn {
     display: none;
 }
 
-
-/* section {
-    margin: 200px auto;
-} */
-
 section h2 {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.438);
     text-decoration: underline;
@@ -233,69 +170,107 @@ section h2 {
 }
 
 section .container {
-    /* height: 1000px; */
-    width: 100%;
-    margin: 0 auto;
     display: flex;
+    justify-content: center;
+    margin-top: 10px;
     flex-wrap: wrap;
+}
+
+section .container form {
+    border-radius: 9px;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
     justify-content: center;
     align-items: center;
-    /* align-content: center; */
+    padding: 20px;
+    margin-top: 20px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
+}
+
+section .container form input {
+    border: 2px solid var(--header-color);
+    font-size: 1.2em;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+section .container form input:focus {
+    box-shadow: 2px 2px 5px rgb(117, 117, 117);
+}
+
+section .container form input.btn {
+    color: white;
+    background-color: #064635;
+    width: 50%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 section .container .box {
-    /*box-shadow: 3px 3px 5px rgba(61, 61, 61, 0.719);
-    */
+    margin: 20px;
     display: flex;
     flex-direction: column;
+    max-width: 400px;
+    max-height: 500px;
+    padding: 20px;
+    background-color: #eee;
     align-items: center;
-    margin: 20px;
-    width: 400px;
-    height: 200px;
-    padding: 10px;
-    border-radius: 8px;
-    transition: 0.4s;
-    background-color: var(--menu-color);
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -ms-transition: 0.4s;
-    -o-transition: 0.4s;
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
-section .container .box:hover {
-    box-shadow: 3px 3px 5px rgba(61, 61, 61, 0.719);
-    opacity: 0.8;
-    transform: scale(1.1, 1.1);
-    -webkit-transform: scale(1.1, 1.1);
-    -moz-transform: scale(1.1, 1.1);
-    -ms-transform: scale(1.1, 1.1);
-    -o-transform: scale(1.1, 1.1);
+section .container .box img {
+    margin-bottom: 10px;
+    max-width: 250px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 section .container .box span {
-    color: white;
-    margin-top: 30px;
-    font-size: 2em;
-    font-weight: 800;
+    display: inline-block;
+    margin-top: 10px;
 }
 
-section .container .box span.text-container {
-    padding: 10px;
-    color: white;
-    border-radius: 7px;
-    margin-top: 30px;
-    font-size: 1.8em;
-    font-weight: 600;
-    background-color: var(--main-color);
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -ms-border-radius: 7px;
-    -o-border-radius: 7px;
+section .container .box span.productName {
+    font-size: 1.5em;
+    color: rgb(0, 0, 0);
 }
 
+section .container .box span.productPrice {
+    font-size: 1.4em;
+    color: rgb(0, 0, 0);
+}
 
-/* adding products style */
+section .container .box span.productPrice span {
+    color: red;
+}
+
+section form span.error {
+    display: block;
+    color: red;
+    font-size: 1em;
+    margin-bottom: 10px;
+}

@@ -16,6 +16,8 @@
 </head>
 
 <body>
+    <?php include('header.php'); ?>
+
     </header>
 
     <section class="home">
@@ -66,7 +68,8 @@
 
             <div class="content">
                 <h3>about us</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quos enim minima ipsa dicta officia corporis ratione saepe sed adipisci?</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quos enim minima ipsa dicta officia
+                    corporis ratione saepe sed adipisci?</p>
                 <a href="about.html" class="btn">read more</a>
             </div>
 
@@ -78,7 +81,8 @@
 
         <div class="content">
             <h3>have any questions?</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque cumque exercitationem repellendus, amet ullam voluptatibus?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque cumque exercitationem repellendus, amet
+                ullam voluptatibus?</p>
             <a href="contact.html" class="white-btn">contact us</a>
         </div>
 

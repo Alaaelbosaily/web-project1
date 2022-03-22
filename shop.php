@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="CSS/styleUser.css">
 
 </head>
 
@@ -21,7 +21,7 @@
 
     <div class="heading">
         <h3>our shop</h3>
-        <p> <a href="home.html">home</a> / shop </p>
+        <p> <a href="home.php">home</a> / shop </p>
     </div>
 
     <section class="products">

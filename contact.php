@@ -11,14 +11,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="CSS/styleUser.css">
 
 </head>
 
 <body>
     < <div class="heading">
         <h3>contact us</h3>
-        <p> <a href="home.html">home</a> / contact </p>
+        <p> <a href="home.php">home</a> / contact </p>
         </div>
 
         <section class="contact">

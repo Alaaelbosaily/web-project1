@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>orders</title>
+    <title>search page</title>
     <link rel="stylesheet" href="CSS/styleUser.css">
 </head>
 
@@ -76,12 +76,20 @@ if(isset($message)){
 
         </header>
         <div class="heading">
-            <h3>place orders</h3>
-            <p><a href="home.php">home</a> / orders</p>
+            <h3>search page</h3>
+            <p> <a href="home.php">home</a> / search </p>
         </div>
 
-        <section class="placed-orders">
-            <h1 class="title">placed orders</h1>
+        <section class="search form">
+            <form action="" method="post">
+                <input type="text" name="search" placeholder="search products..." class="box">
+                <input type="submit" name="submit" value="search" class="btn">
+            </form>
+
+        </section>
+
+        <section class="product" style="padding-top: 0;">
+
         </section>
         <section class="footer">
 

@@ -9,7 +9,7 @@
                 <a href="#" class="feb fa-linkedin"></a>
 
             </div>
-            <p> new <a href="login.html">login</a> | <a href="register.html">register</a> </p>
+            <p> new <a href="login.php">login</a> | <a href="signup.php">register</a> </p>
 
         </div>
 
@@ -20,11 +20,11 @@
             <a href="home.html" class="logo">Bookly</a>
 
             <nav class="navbar">
-                <a href="home.html">home</a>
-                <a href="about.html">about</a>
-                <a href="shop.html">shop</a>
-                <a href="contact.html">contact</a>
-                <a href="orders.html">orders</a>
+                <a href="home.php">home</a>
+                <a href="about.php">about</a>
+                <a href="shop.php">shop</a>
+                <a href="contact.php">contact</a>
+                <a href="orders.php">orders</a>
 
 
 
@@ -34,7 +34,7 @@
                 <div id="menu-btn" class="fas fa-bars"></div>
                 <a href="search_page.html" class="fas fa-search"></a>
                 <div id="user-btn" class="fas fa user"></div>
-                <a href="cart.html"><i class="fas fa-shopping-cart"></i> <span>(00)</span></a>
+                <a href="cart.php"><i class="fas fa-shopping-cart"></i> <span>(00)</span></a>
             </div>
         </div>
 

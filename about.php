@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="CSS/styleUser.css">
 
 </head>
 
@@ -21,7 +21,7 @@
 
     <div class="heading">
         <h3>about us</h3>
-        <p> <a href="home.html">home</a> / about </p>
+        <p> <a href="home.php">home</a> / about </p>
     </div>
 
     <section class="about">
@@ -39,7 +39,7 @@
                     id officia assumenda temporibus?</p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quos enim minima ipsa dicta officia
                     corporis ratione saepe sed adipisci?</p>
-                <a href="contact.html" class="btn">contact us</a>
+                <a href="contact.php" class="btn">contact us</a>
             </div>
 
         </div>
