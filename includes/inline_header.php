@@ -5,9 +5,9 @@
     <nav class=" navbar ">
         <a class=" aa " href=" admin_header.php ">Home</a>
         <a class=" bb " href=" adding_products.php ">Products</a>
-        <a class=" cc " href=" # ">Orders</a>
+        <a class=" cc " href=" admin_orders.php ">Orders</a>
         <a class=" dd " href=" users.php ">Users</a>
-        <a class=" ff " href=" # ">Contact us</a>
+        <a class=" ff " href=" admin_contacts.php ">Contact us</a>
     </nav>
 
     <div class=" icons ">

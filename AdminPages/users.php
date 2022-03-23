@@ -19,7 +19,7 @@ require($includes.'connect.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=<?php echo  $css."kareem_style.css"?>>
+    <link rel="stylesheet" href=<?php echo  $css."admin_style.css"?>>
     <title>Document</title>
 </head>
 
@@ -27,6 +27,35 @@ require($includes.'connect.php');
 
 
 
+    <section class="admins">
+        <h2>Admins</h2>
+        <div class="titles">
+            <span>user Id</span>
+            <span>user Name</span>
+            <span>user Email</span>
+            <span>user Full Name</span>
+        </div>
+        <div class="all-users">
+            <?php 
+        if(count($result)>0){
+            foreach($result as $value){
+                echo' <div class="users-data titles">
+                <span> '.htmlspecialchars( $value['userId']).'</span>
+            <span>'.htmlspecialchars( $value['userName']).'</span>
+            <span>'. htmlspecialchars($value['email']).'</span>
+            <span>'. htmlspecialchars($value['fullName']).'</span>
+    
+            </div>';
+            }
+            }
+    
+            ?>
+        </div>
+        <form action="<?php $_SERVER['PHP_SELF']?>" class="btn-container">
+            <input type="submit" name="addNewUser" value="Add New" class="addNewUser btn">
+        </form>
+
+    </section>
     <section class="admins">
         <h2>Admins</h2>
         <div class="titles">
