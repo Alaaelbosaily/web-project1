@@ -1,5 +1,7 @@
 <?php
-require('connect.php');
+$noNavUser='';
+include('../init.php');
+require($includes.'connect.php');
 
     try{
         $fetchPrepare=$con->prepare('SELECT userId,userName,email,CONCAT(firstName ," ", lastName) AS fullName FROM users WHERE userGroup=?');
@@ -17,12 +19,12 @@ require('connect.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/kareem_style.css">
+    <link rel="stylesheet" href=<?php echo  $css."kareem_style.css"?>>
     <title>Document</title>
 </head>
 
 <body>
-    <?php include('inline_header.php')?>
+
 
 
     <section class="admins">

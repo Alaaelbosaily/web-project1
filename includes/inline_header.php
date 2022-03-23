@@ -6,7 +6,7 @@
         <a class=" aa " href=" admin_header.php ">Home</a>
         <a class=" bb " href=" adding_products.php ">Products</a>
         <a class=" cc " href=" # ">Orders</a>
-        <a class=" dd " href=" # ">Users</a>
+        <a class=" dd " href=" users.php ">Users</a>
         <a class=" ff " href=" # ">Contact us</a>
     </nav>
 

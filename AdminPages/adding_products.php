@@ -1,9 +1,13 @@
 <?php
+
+$noNavUser='';
+include('../init.php');
+
     session_start();
-    // if(!($_SESSION['userId']==2)){
+    // if(!($_SESSION['userId']==0)){
     //     header("Location:login.php");
     // }  
-    
+    require($includes.'connect.php');
     $errors=[
         'generalError'=>'',
         'productName'=>'',
@@ -26,7 +30,7 @@
         'productPrice'=>'',
         'productQuantity'=>'',
     ];
-    require('connect.php');
+    
     if(isset($_POST['addProduct'])){
         if(empty($_POST['productName'])){
             $errors['productName']='Required';
@@ -126,14 +130,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/kareem_style.css">
+    <link rel="stylesheet" href=<?php echo $css."kareem_style.css"?>>
     <link rel="stylesheet" href="<link rel=" preconnect " href=" https://fonts.googleapis.com ">
     <link rel=" preconnect " href=" https://fonts.gstatic.com " crossorigin>
     <title>Document</title>
 </head>
 
 <body>
-    <?php include('inline_header.php') ?>
+    
         <section>
             <h2>Add Products</h2>
             <div class=" container ">
@@ -189,7 +193,7 @@
                 if(count($result)>0){
                     foreach($result as $book){
                         echo('<div class="box">
-                        <img src="images/01.png" alt="productImage"data-id="'.$book['bookId'].'">
+                        <img src="../images/01.png" alt="productImage"data-id="'.$book['bookId'].'">
                         <span class="productName" data-id="'.$book['bookId'].'">'.$book['name'].'</span>
                         <span class="productPrice"data-id="'.$book['bookId'].'">'.$book['price'].'<span>/$</span></span>
                         <form action="'.$_SERVER['PHP_SELF'].'" method="post">
