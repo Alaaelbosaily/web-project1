@@ -1,3 +1,8 @@
+<?php 
+$noNavAdmin='';
+include('../init.php')
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,8 +10,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>checkout</title>
-    <link rel="stylesheet" href="CSS/styleUser.css">
+    <title>search page</title>
+    <link rel="stylesheet" href=<?php echo $css."styleUser.css"?>>
 </head>
 
 <body>
@@ -57,13 +62,18 @@ if(isset($message)){
                $select_cart_number = mysqli_query($conn, "SELECT * FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
                $cart_rows_number = mysqli_num_rows($select_cart_number); 
             ?>
-                    <a href="cart.php"> <i class="fas fa-shopping-cart"></i>
-                        <span>(<?php echo $cart_rows_number; ?>)</span> </a>
+                    <a href="cart.php"> <i class="fas fa-shopping-cart"></i> <span>(
+                            <?php echo $cart_rows_number; ?>)
+                        </span> </a>
                 </div>
 
                 <div class="user-box">
-                    <p>username : <span><?php echo $_SESSION['user_name']; ?></span></p>
-                    <p>email : <span><?php echo $_SESSION['user_email']; ?></span></p>
+                    <p>username : <span>
+                            <?php echo $_SESSION['user_name']; ?>
+                        </span></p>
+                    <p>email : <span>
+                            <?php echo $_SESSION['user_email']; ?>
+                        </span></p>
                     <a href="logout.php" class="delete-btn">logout</a>
                 </div>
             </div>
@@ -71,66 +81,20 @@ if(isset($message)){
 
     </header>
     <div class="heading">
-        <h3>checkout</h3>
-        <p><a href="home.php">home</a> / checkout</p>
+        <h3>search page</h3>
+        <p> <a href="home.php">home</a> / search </p>
     </div>
 
-    <section class="display-order"></section>
-
-    <section class="checkout">
-
+    <section class="search form">
         <form action="" method="post">
-            <h3>place your order</h3>
-            <div class="flex">
-                <div class="inputBox">
-                    <span>your name :</span>
-                    <input type="text" name="name" required placeholder="enter your name">
-                </div>
-                <div class="inputBox">
-                    <span>your number :</span>
-                    <input type="text" name="number" required placeholder="enter your number">
-                </div>
-                <div class="inputBox">
-                    <span>your email :</span>
-                    <input type="text" name="email" required placeholder="enter your email">
-                </div>
-                <div class="inputBox">
-                    <span>payment method :</span>
-                    <select class="method">
-                        <option value="cash on delivery">cash on delivery</option>
-                        <option value="credit card">credit card</option>
-                        <option value="paypal">paypal</option>
-                        <option value="paytm">paytm</option>
-                    </select>
-                </div>
-                <div class="inputBox">
-                    <span>address line 01 :</span>
-                    <input type="number" name="flat" required placeholder="e.g. flat no.">
-                </div>
-                <div class="inputBox">
-                    <span>address line 01 :</span>
-                    <input type="text" name="street" required placeholder="e.g. street name.">
-                </div>
-                <div class="inputBox">
-                    <span>city :</span>
-                    <input type="text" name="city" required placeholder="e.g. Suez.">
-                </div>
-                <div class="inputBox">
-                    <span>state :</span>
-                    <input type="text" name="state" required placeholder="e.g. Suez.">
-                </div>
-                <div class="inputBox">
-                    <span>country :</span>
-                    <input type="text" name="country" required placeholder="e.g. Egypt.">
-                </div>
-                <div class="inputBox">
-                    <span>pin code :</span>
-                    <input type="number" min="0" name="pin_code" required placeholder="e.g. 123456.">
-                </div>
-            </div>
-            <input type="submit" value="order now" class="btn" name="order_btn">
-
+            <input type="text" name="search" placeholder="search products..." class="box">
+            <input type="submit" name="submit" value="search" class="btn">
         </form>
+
+    </section>
+
+    <section class="product" style="padding-top: 0;">
+
     </section>
     <section class="footer">
 
@@ -170,7 +134,9 @@ if(isset($message)){
 
         </div>
 
-        <p class="credit"> &copy; copyright @ <?php echo date('Y'); ?> by <span>mr. web designer</span> </p>
+        <p class="credit"> &copy; copyright @
+            <?php echo date('Y'); ?> by <span>mr. web designer</span>
+        </p>
 
     </section>
 </body>
