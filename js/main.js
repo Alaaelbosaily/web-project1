@@ -20,8 +20,8 @@ let imgs = ["01.png", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];
 let landingPage = document.querySelector(".landing-page");
 
 function sayhello() {
-    console.log("hello world")
-    console.log("hello world")
+    console.log("hello world");
+    console.log("hello world");
 }
 //change backimage after 4s
 setInterval(() => {
@@ -58,4 +58,8 @@ colorLi.forEach((li) => {
         });
         e.target.classList.add("active");
     });
+});
+
+$(window).on("load", function() {
+    $(".loader_bg").fadeOut("slow");
 });

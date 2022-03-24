@@ -23,3 +23,4 @@
         </div>
     </div>
 </header>
+<script src="https://kit.fontawesome.com/33d59f4782.js" crossorigin="anonymous"></script>

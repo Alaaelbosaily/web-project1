@@ -10,11 +10,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="loaderStyle.css">
 
     <title>Landing Page</title>
 </head>
 
 <body>
+    </div>
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
 
     <!-- start settings box -->
     <div class="settings-box">
@@ -58,8 +63,13 @@
             <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quidem nemo maiores ipsa veritatis vero odit reiciendis, quia quaerat cum!</p> -->
 
         </div>
-    </div>
-    <script src="js/main.js"></script>
+
+        <script>
+            $(window).on('load', function() {
+                $(".loader_bg").fadeOut("slow");
+            })
+        </script>
+        <script src="js/main.js"></script>
 </body>
 
 </html>

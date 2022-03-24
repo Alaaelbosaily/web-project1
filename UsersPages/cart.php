@@ -1,5 +1,6 @@
 <?php 
 $noNavAdmin='';
+$noNavUser='';
 include('../init.php')
 ?>
 <!DOCTYPE html>
@@ -70,7 +71,7 @@ include('../init.php')
                 </span></p>
             <div class="flex">
                 <a href="shop.html" class="option-btn">continue shopping</a>
-                <a href="checkout.html" class="btn >">proceed to
+                <a href="checkout.php" class="btn >">proceed to
                     checkout</a>
             </div>
         </div>

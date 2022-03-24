@@ -42,6 +42,7 @@
 
     <link rel="stylesheet" href="<link rel=" preconnect " href=" https://fonts.googleapis.com ">
    <link rel=" preconnect " href=" https://fonts.gstatic.com " crossorigin>
+   
   </head>
   <body>
       
@@ -85,10 +86,15 @@
 
 
       </div>
-    </section>
+      <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
 
-    <script src=" ../js/admin_script.js">
+    <script>
+      
     </script>
+
+  
     </body>
 
 </html>
